@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/student/cv/contact', function() {
+    return view('student.cv.contact');
+});
+
+Route::get('/student/cv/education', function() {
+    return view('student.cv.education');
+});
+
+Route::get('/student/cv/home', function() {
+    return view('student.cv.home');
+});
+
+Route::get('/student/cv/project', function() {
+    return view('student.cv.project');
+});
