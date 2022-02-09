@@ -12,6 +12,9 @@ class MyselfController extends Controller
         return view('student.myself.friend')->with('friends', $friends);
     }
     public function hobby(){
-        return view('student.myself.hobby');
+        $hobbies = array("num1"=>"sleep", "num2"=>"Football", "num3"=>"Cricket", "num4" => "Travel");
+        $hobbies = (object)$hobbies;
+        return var_dump($hobbies);
+        //return view('student.myself.hobby');
     }
 }
