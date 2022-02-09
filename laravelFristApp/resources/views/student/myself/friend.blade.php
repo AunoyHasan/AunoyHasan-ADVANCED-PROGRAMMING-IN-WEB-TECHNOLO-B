@@ -1,3 +1,8 @@
+@extends('student.layouts.myselfed')
+@section('content')
+
+<br><br>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,3 +27,5 @@
     
 </body>
 </html>
+<br>
+@endsection
