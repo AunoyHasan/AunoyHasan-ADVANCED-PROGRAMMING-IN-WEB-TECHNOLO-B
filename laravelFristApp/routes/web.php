@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\MyselfController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,6 @@ Route::get('/student/cv/project', function() {
 Route::get('/student/cv/contact', [PagesController::class, 'contact']);
 Route::get('/student/cv/education', [PagesController::class, 'education']);
 Route::get('/student/cv/project', [PagesController::class, 'project']);
+
+Route::get('/student/myslef/friend', [MyselfController::class, 'friend']);
+Route::get('/student/myself/hobby', [MyselfController::class, 'hobby']);
