@@ -46,3 +46,4 @@ Route::get('/student/myself/hobby', [MyselfController::class, 'hobby']);
 Route::get('/student/myself/fan', [MyselfController::class, 'fan']);
 
 Route::get('/student/myself/dynamicRouting/{name}/{id}', [MyselfController::class, 'dynamicRouting']);
+Route::get('/student/myself/namedRouting', [MyselfController::class, 'namedRouting'])->name('namedRouting');

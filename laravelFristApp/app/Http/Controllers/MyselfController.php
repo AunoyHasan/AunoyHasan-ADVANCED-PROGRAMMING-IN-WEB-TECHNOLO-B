@@ -42,4 +42,8 @@ class MyselfController extends Controller
         ->with('id', $id);
     }
 
+    public function namedRouting(){
+        return view('student.myself.namedRouting');
+    }
+
 }
