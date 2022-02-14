@@ -44,3 +44,5 @@ Route::get('/student/cv/project', [PagesController::class, 'project']);
 Route::get('/student/myslef/friend', [MyselfController::class, 'friend']);
 Route::get('/student/myself/hobby', [MyselfController::class, 'hobby']);
 Route::get('/student/myself/fan', [MyselfController::class, 'fan']);
+
+Route::get('/student/myself/dynamicRouting/{name}/{id}', [MyselfController::class, 'dynamicRouting']);
