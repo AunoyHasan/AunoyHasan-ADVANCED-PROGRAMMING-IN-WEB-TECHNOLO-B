@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Routing</title>
+    <title>Dynamic Named Routing</title>
 </head>
 <body>
-    <br>
-    <a href="{{route('namedRouting')}}"> NamedRouting </a> |
-    <a href="{{route('namedDynamicRouting')}}"> NamedDynamicRouting </a>
-    <br>
-    <h2>Welcome to Dynamic Routing </h2><br><br>
+
+    <h2>This is Dynamic Named Routing </h2><br>
+
     Name: {{$name}}<br>
-    Id: {{$id}}
+    Id: {{$id+33}}
+    
 </body>
 </html>

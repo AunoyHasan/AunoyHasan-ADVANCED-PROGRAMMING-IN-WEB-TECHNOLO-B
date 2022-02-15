@@ -36,14 +36,24 @@ class MyselfController extends Controller
         return view('student.myself.fan')->with('fans', $fans);
     }
 
+    //Dynamic Routing
     public function dynamicRouting($name, $id){
         return view('student.myself.dynamicRouting')
         ->with('name', $name)
         ->with('id', $id);
     }
-
+    
+    //Named ROuting
     public function namedRouting(){
         return view('student.myself.namedRouting');
+    }
+
+    // Dynamic Named Routing
+    public function namedDynamicRouting(Request $req){
+        return view('student.myself.namedDynamicRouting')
+        ->with('name', $req->name)
+        ->with('id', $req->id-33)
+        ;
     }
 
 }
