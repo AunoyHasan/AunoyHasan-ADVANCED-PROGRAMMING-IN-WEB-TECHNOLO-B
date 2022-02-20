@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\MyselfController;
+use App\Http\Controllers\FormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,3 +49,7 @@ Route::get('/student/myself/fan', [MyselfController::class, 'fan']);
 Route::get('/student/myself/dynamicRouting/{name}/{id}', [MyselfController::class, 'dynamicRouting']);
 Route::get('/student/myself/namedRouting', [MyselfController::class, 'namedRouting'])->name('namedRouting');
 Route::get('/student/myself/namedDynamicRouting/{name}/{id}', [MyselfController::class, 'namedDynamicRouting'])->name('namedDynamicRouting');
+
+Route::get('/registration', [FormController::class, 'registration'])->name('registration');
+
+Route::post('/registration', [FormController::class, 'registrationSubmit'])->name('register.submit');
