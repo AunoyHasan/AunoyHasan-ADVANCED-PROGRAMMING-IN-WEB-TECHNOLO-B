@@ -14,37 +14,7 @@
     <br><br>
 
     <form action="{{route('register.submit')}}" method="post">
-        
-        <!--
-        {{csrf_field()}} 
-        <input type="text" placeholder="name" name="name"> <br>
-        @error('name')
-        <span class="text-danger"> {{$message}} </span>
-        @enderror 
-
-        <input type="text" placeholder="username" name="username"> <br>
-        @error('username')
-        <span class="text-danger"> {{$message}} </span>
-        @enderror 
-
-        @error('password')
-        <span class="text-danger"> {{$message}} </span>
-        @enderror 
-        <input type="password" placeholder="password" name="password"> <br>
-
-        @error('confirmPassword')
-        <span class="text-danger"> {{$message}} </span>
-        @enderror 
-        <input type="confirmPassword" placeholder="Confirm password" name="confirmPassword"> <br>
-        
-        @error('email')
-        <span class="text-danger"> {{$message}} </span>
-        @enderror 
-        <input type="text" placeholder="email" name="email"> <br>
-        
-        <input type="submit" value="Submit" name="submit"> <br> -->
-
-        
+         
         {{csrf_field()}}
         
         <input type="text" placeholder="name" name="name" value="{{old('name')}}"> <br>
