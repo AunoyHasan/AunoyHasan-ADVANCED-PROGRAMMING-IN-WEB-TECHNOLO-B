@@ -47,12 +47,12 @@
         
         {{csrf_field()}}
         
-        <input type="text" placeholder="name" name="name"> <br>
+        <input type="text" placeholder="name" name="name" value="{{old('name')}}"> <br>
         @error('name')
         <span class="text-danger"> {{$message}} </span> <br>
         @enderror
 
-        <input type="text" placeholder="username" name="username"> <br>
+        <input type="text" placeholder="username" name="username" value="{{old('username')}}"> <br>
         @error('username')
         <span class="text-danger"> {{$message}} </span> <br>
         @enderror
@@ -67,7 +67,7 @@
         <span class="text-danger"> {{$message}} </span> <br>
         @enderror
 
-        <input type="text" placeholder="email" name="email"> <br>
+        <input type="text" placeholder="email" name="email" value="{{old('email')}}"> <br>
         @error('email')
         <span class="text-danger"> {{$message}} </span> <br>
         @enderror
