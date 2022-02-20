@@ -16,11 +16,19 @@ class FormController extends Controller
     {
 
         $req->validate(
+            //compulsory parameter
             [
+                'name'=>'required|regex:/^[A-Z a-z]+$/',
                 'username'=>'required|min:3|max:10',
                 'password'=>'required',
-                'confirmPassword'=>'confirmPassword',
+                'confirmPassword'=>'required|same:password',
                 'email'=>'required|email'
+            ],
+            //optional parameter
+            [
+                'username.required'=>'Please provide the usrname',
+                'username.max'=>'username must not exceed 10 characters',
+                'confirmPassword.same'=>'Password must be same'
             ]
         );
 
