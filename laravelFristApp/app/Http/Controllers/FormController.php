@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class FormController extends Controller
 {
@@ -49,6 +50,13 @@ class FormController extends Controller
                 'confirmPassword.same'=>'Password must be same'
             ]
         );
+
+        $st = new Student();
+        $st->name = $req->name;
+        $st->username = $req->username;
+        $st->email = $req->email;
+        $st->password = $req->password;
+        $st->save();
 
         return "<h1> Registration Submitted with $req->username</h1>";
 
