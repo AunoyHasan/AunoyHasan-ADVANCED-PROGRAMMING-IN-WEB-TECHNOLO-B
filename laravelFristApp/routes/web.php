@@ -53,3 +53,4 @@ Route::get('/student/myself/namedDynamicRouting/{name}/{id}', [MyselfController:
 Route::get('/registration', [FormController::class, 'registration'])->name('registration');
 
 Route::post('/registration', [FormController::class, 'registrationSubmit'])->name('register.submit');
+Route::get('/students/list',[FormController::class,'list'])->name('students.list');

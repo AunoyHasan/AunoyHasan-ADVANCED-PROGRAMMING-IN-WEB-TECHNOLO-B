@@ -62,6 +62,11 @@ class FormController extends Controller
 
     }
 
+    public function list(){
+        $students = Student::all(); //select * from students and also converts it into collection of student oobject
+        return view('student.form.list')->with('students',$students);
+    }
+
     public function registration(){
         return view('student.form.registration');
     }
