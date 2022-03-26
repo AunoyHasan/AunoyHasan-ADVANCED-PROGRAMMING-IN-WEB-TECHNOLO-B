@@ -1,0 +1,1 @@
+<h1 align="center">Welcome {{$student->name}}</h1>
